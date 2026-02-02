@@ -1,0 +1,107 @@
+:root{
+  --bg: #141416;        /* темно-серый */
+  --panel: #1c1c20;     /* блоки */
+  --text: #eaeaf0;      /* текст */
+  --muted: #b7b7c6;     /* вторичный текст */
+  --accent: #6b5bd3;    /* темно-лавандовый */
+  --border: #2a2a31;    /* границы */
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* общий контейнер */
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* верхнее меню */
+header{
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.nav{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav a{
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav a:hover{
+  text-decoration: underline;
+}
+
+/* заголовки */
+h1{
+  margin: 16px 0 10px;
+  font-size: 32px;
+}
+
+h2{
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+p{
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+/* секция */
+.section{
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+/* карточки команды */
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.card{
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+}
+
+.role{
+  display: inline-block;
+  margin: 6px 0 10px;
+  padding: 4px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 13px;
+}
+
+/* чтобы под курсы/контакты тоже было ок */
+.list{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
